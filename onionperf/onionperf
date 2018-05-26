@@ -369,11 +369,11 @@ def measure(args):
         client_connect_ip = args.tgenconnectip
         client_connect_port = args.tgenconnectport
         client_tgen_port = util.get_random_free_port()
-        client_tor_ctl_port = util.get_random_free_port()
+        client_tor_ctl_port = 9151
         client_tor_socks_port = util.get_random_free_port()
 
         server_tgen_port = args.tgenlistenport
-        server_tor_ctl_port = util.get_random_free_port()
+        server_tor_ctl_port = 9051
         server_tor_socks_port = util.get_random_free_port()
         twistd_port = args.twistdport
 
