@@ -332,7 +332,7 @@ class Measurement(object):
         generate_docroot_index(twisted_docroot)
         self.twisted_docroot = twisted_docroot
 
-        twisted_cmd = "{0} -n -l - web --port {1} --path {2} --mime-type=None".format(self.twistd_bin_path, twistd_port, twisted_docroot)
+        twisted_cmd = "{0} -n -l - web --port tcp:{1} --path {2} --mime-type=None".format(self.twistd_bin_path, twistd_port, twisted_docroot)
         twisted_args = (twisted_cmd, twisted_datadir, twisted_writable, self.done_event, None, None, None)
         twisted_watchdog = threading.Thread(target=watchdog_thread_task, name="twistd_watchdog", args=twisted_args)
         twisted_watchdog.start()
