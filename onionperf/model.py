@@ -76,7 +76,7 @@ class TorperfModel(GeneratableTGenModel):
         g.add_node("start", serverport=self.tgen_port, peers=server_str, loglevel="info", heartbeat="1 minute")
         if self.socksproxy is not None:
             g.node["start"]["socksproxy"] = self.socksproxy
-        g.add_node("pause", time="5 minutes")
+        g.add_node("pause", time="30 seconds")
         g.add_node("transfer50k", type="get", protocol="tcp", size="50 KiB", timeout="295 seconds", stallout="300 seconds")
         g.add_node("transfer1m", type="get", protocol="tcp", size="1 MiB", timeout="1795 seconds", stallout="1800 seconds")
         g.add_node("transfer5m", type="get", protocol="tcp", size="5 MiB", timeout="3595 seconds", stallout="3600 seconds")
