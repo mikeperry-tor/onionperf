@@ -68,6 +68,11 @@ def extract_data(state_fname, subsampling_n):
 
     return (data, hist)
 
+def _get_hist(hist, idx):
+  if not idx in hist:
+    return 0
+  return hist[idx]
+
 def get_xm(data, hist):
   avg_modes=XM_AVG_MODES
   avg_below=XM_AVG_BELOW
@@ -80,18 +85,18 @@ def get_xm(data, hist):
   # obtain the nth highest modes
   nth_max_bin = [0] * num_modes
   for i in hist.keys():
-    if not nth_max_bin[0] in hist or \
-       hist[i] >= hist[nth_max_bin[0]]:
+    if hist[i] >= _get_hist(hist, nth_max_bin[0]):
       nth_max_bin[0] = i
 
     for n in range(1, num_modes):
-      if not nth_max_bin[n] in hist or \
-         (hist[i] >= hist[nth_max_bin[n]] and \
-         (hist[i] < hist[nth_max_bin[n-1]])):
-        nth_max_bin[n] = i
+      if (hist[i] >= _get_hist(hist, nth_max_bin[n]) and
+           (not _get_hist(hist, nth_max_bin[n-1])
+               or hist[i] < _get_hist(hist, nth_max_bin[n-1]))):
+        nth_max_bin[n] = i;
 
   Xm = 0
 
+  # XXX: Most common mode not tested, but it is not good
   if max_mode:
     Xm = max(nth_max_bin)
     assert not avg_modes
@@ -115,7 +120,7 @@ def get_xm(data, hist):
     xm_cnt = 0
 
     for x in data:
-      if x <= Xm+1: # +1 is hack for rounding issues
+      if x <= Xm:
         tot_xm += x
         xm_cnt += 1
 
@@ -276,7 +281,15 @@ def main():
     subsample_test(state_fnames_list)
 
     (XM_NUM_MODES, XM_MAX_MODE, XM_AVG_MODES, XM_AVG_BELOW, XM_ALL_MODES) = \
+               (7,      True,         False,         True,         True)
+    subsample_test(state_fnames_list)
+
+    (XM_NUM_MODES, XM_MAX_MODE, XM_AVG_MODES, XM_AVG_BELOW, XM_ALL_MODES) = \
                (10,      True,         False,         True,         True)
+    subsample_test(state_fnames_list)
+
+    (XM_NUM_MODES, XM_MAX_MODE, XM_AVG_MODES, XM_AVG_BELOW, XM_ALL_MODES) = \
+               (15,      True,         False,         True,         True)
     subsample_test(state_fnames_list)
 
     (XM_NUM_MODES, XM_MAX_MODE, XM_AVG_MODES, XM_AVG_BELOW, XM_ALL_MODES) = \
