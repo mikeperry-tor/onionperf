@@ -23,6 +23,7 @@ XM_MAX_MODE = True
 XM_AVG_MODES = False
 XM_AVG_BELOW = True
 XM_ALL_MODES = True
+XM_MIN_BIN_CNT = 0
 
 def parse_state_line(line, full_hist):
     """
@@ -73,35 +74,38 @@ def _get_hist(hist, idx):
     return 0
   return hist[idx]
 
+def get_mode_sort(hist, num_modes):
+  # Compute modes via sort, spot-check it is top N modes
+  nth_max_check = list(hist.keys())
+  nth_max_check.sort(key=lambda x: hist[x], reverse=True)
+  nth_max_bin = nth_max_check[0:num_modes]
+
+  # Hack to match C sort behavior of lowest-time modes
+  nth_max_bin = list(filter(lambda x: hist[x] >= hist[nth_max_check[num_modes-1]], nth_max_check))
+  nth_max_bin.sort()
+  nth_max_bin = nth_max_bin[0:num_modes]
+
+  return nth_max_bin
+
 def get_xm(data, hist):
   avg_modes=XM_AVG_MODES
   avg_below=XM_AVG_BELOW
   all_modes=XM_ALL_MODES
   num_modes=XM_NUM_MODES
   max_mode=XM_MAX_MODE
+  min_bin_cnt=XM_MIN_BIN_CNT
   if not all_modes and len(data) < 600: # XXX: hack for abandoned circs
     num_modes = 1
 
-  # obtain the nth highest modes
-  nth_max_bin = [0] * num_modes
-  for i in hist.keys():
-    if hist[i] >= _get_hist(hist, nth_max_bin[0]):
-      nth_max_bin[0] = i
-
-    for n in range(1, num_modes):
-      if (hist[i] >= _get_hist(hist, nth_max_bin[n]) and
-           (not _get_hist(hist, nth_max_bin[n-1])
-               or hist[i] < _get_hist(hist, nth_max_bin[n-1]))):
-        nth_max_bin[n] = i;
+  nth_max_bin = get_mode_sort(hist, num_modes)
 
   Xm = 0
 
-  # XXX: Most common mode not tested, but it is not good
   if max_mode:
     Xm = max(nth_max_bin)
     assert not avg_modes
   else:
-    Xm = min(nth_max_bin)
+    Xm = nth_max_bin[0]
 
   assert Xm
 
@@ -110,10 +114,12 @@ def get_xm(data, hist):
     xm_cnt = 0
 
     for i in range(0, num_modes):
-      tot_xm += nth_max_bin[i]*hist[nth_max_bin[i]]
-      xm_cnt += hist[nth_max_bin[i]]
+      if hist[nth_max_bin[i]] >= min_bin_cnt:
+        tot_xm += (nth_max_bin[i])*hist[nth_max_bin[i]]
+        xm_cnt += hist[nth_max_bin[i]]
 
-    Xm = tot_xm/xm_cnt
+    if xm_cnt:
+      Xm = int(int(tot_xm)/int(xm_cnt))
 
   if avg_below:
     tot_xm = 0
@@ -123,8 +129,8 @@ def get_xm(data, hist):
       if x <= Xm:
         tot_xm += x
         xm_cnt += 1
-
-    Xm = tot_xm / xm_cnt
+    if xm_cnt:
+      Xm = tot_xm / xm_cnt
 
   return Xm
 
@@ -211,8 +217,8 @@ def plot_state_file(state_fname, data, hist, ax, full_data):
     #plt.savefig(basename + "_pareto.png", dpi=300)
 
 def subsample_test(state_fnames_list):
-    print("\nTimeout test with XM_NUM_MODES=%d; XM_MAX_MODE=%d XM_AVG_MODES=%d; XM_AVG_BELOW=%d; XM_ALL_MODES=%d" %
-          (XM_NUM_MODES, XM_MAX_MODE, XM_AVG_MODES, XM_AVG_BELOW, XM_ALL_MODES))
+    print("\nTimeout test with XM_NUM_MODES=%d; XM_MAX_MODE=%d XM_AVG_MODES=%d; XM_AVG_BELOW=%d; XM_ALL_MODES=%d XM_MIN_BIN_CNT=%d" %
+          (XM_NUM_MODES, XM_MAX_MODE, XM_AVG_MODES, XM_AVG_BELOW, XM_ALL_MODES, XM_MIN_BIN_CNT))
 
     for i, state_fname in enumerate(state_fnames_list):
         (full_data,full_hist) = extract_data(state_fname, 1000)
@@ -227,15 +233,15 @@ def subsample_test(state_fnames_list):
             rates_60.append(math.fabs(rate_60-0.6))
             rates_70.append(math.fabs(rate_70-0.7))
             rates_80.append(math.fabs(rate_80-0.8))
-          print("%s-%d 60 avg/dev error: %f/%f" %
+          print("%-12.12s %5d 60 avg/max/dev error: %0.6f/%0.3f/%0.3f" %
                (basename, subsampling_n,
-                numpy.mean(rates_60), numpy.std(rates_60)))
-          print("%s-%d 70 avg/dev error: %f/%f" %
+                numpy.mean(rates_60), max(rates_60), numpy.std(rates_60)))
+          print("%-12.12s %5d 70 avg/max/dev error: %0.6f/%0.3f/%0.3f" %
                (basename, subsampling_n,
-                numpy.mean(rates_70), numpy.std(rates_70)))
-          print("%s-%d 80 avg/dev error: %f/%f" %
+                numpy.mean(rates_70), max(rates_70), numpy.std(rates_70)))
+          print("%-12.12s %5d 80 avg/max/dev error: %0.6f/%0.3f/%0.3f" %
                (basename, subsampling_n,
-                numpy.mean(rates_80), numpy.std(rates_80)))
+                numpy.mean(rates_80), max(rates_80), numpy.std(rates_80)))
 
 def plot_all(state_fnames_list):
     n_states = len(state_fnames_list)
@@ -258,18 +264,10 @@ def main():
 
     state_fnames_list = sys.argv[1:]
 
-    global XM_NUM_MODES, XM_MAX_MODE, XM_AVG_MODES, XM_AVG_BELOW, XM_ALL_MODES
-
-    (XM_NUM_MODES, XM_MAX_MODE, XM_AVG_MODES, XM_AVG_BELOW, XM_ALL_MODES) = \
-               (3,       False,        True,        False,         False)
-    subsample_test(state_fnames_list)
+    global XM_NUM_MODES, XM_MAX_MODE, XM_AVG_MODES, XM_AVG_BELOW, XM_ALL_MODES, XM_MIN_BIN_CNT
 
     (XM_NUM_MODES, XM_MAX_MODE, XM_AVG_MODES, XM_AVG_BELOW, XM_ALL_MODES) = \
                (3,       False,         True,         True,         True)
-    subsample_test(state_fnames_list)
-
-    (XM_NUM_MODES, XM_MAX_MODE, XM_AVG_MODES, XM_AVG_BELOW, XM_ALL_MODES) = \
-               (3,       False,        False,         True,         True)
     subsample_test(state_fnames_list)
 
     (XM_NUM_MODES, XM_MAX_MODE, XM_AVG_MODES, XM_AVG_BELOW, XM_ALL_MODES) = \
@@ -277,25 +275,115 @@ def main():
     subsample_test(state_fnames_list)
 
     (XM_NUM_MODES, XM_MAX_MODE, XM_AVG_MODES, XM_AVG_BELOW, XM_ALL_MODES) = \
+               (5,       False,        True,         False,         True)
+    subsample_test(state_fnames_list)
+
+    (XM_NUM_MODES, XM_MAX_MODE, XM_AVG_MODES, XM_AVG_BELOW, XM_ALL_MODES) = \
                (5,       True,         False,         True,         True)
     subsample_test(state_fnames_list)
 
     (XM_NUM_MODES, XM_MAX_MODE, XM_AVG_MODES, XM_AVG_BELOW, XM_ALL_MODES) = \
-               (7,      True,         False,         True,         True)
+               (5,       False,        True,          True,         True)
     subsample_test(state_fnames_list)
 
     (XM_NUM_MODES, XM_MAX_MODE, XM_AVG_MODES, XM_AVG_BELOW, XM_ALL_MODES) = \
-               (10,      True,         False,         True,         True)
+               (7,       False,        True,         False,         True)
     subsample_test(state_fnames_list)
 
     (XM_NUM_MODES, XM_MAX_MODE, XM_AVG_MODES, XM_AVG_BELOW, XM_ALL_MODES) = \
-               (15,      True,         False,         True,         True)
+               (10,       False,        True,         True,         True)
     subsample_test(state_fnames_list)
 
     (XM_NUM_MODES, XM_MAX_MODE, XM_AVG_MODES, XM_AVG_BELOW, XM_ALL_MODES) = \
-               (20,      True,         False,         True,         True)
+               (10,       True,         False,         True,         True)
     subsample_test(state_fnames_list)
 
+    XM_MIN_BIN_CNT = 0
+    (XM_NUM_MODES, XM_MAX_MODE, XM_AVG_MODES, XM_AVG_BELOW, XM_ALL_MODES) = \
+               (10,       False,        True,         False,         True)
+    subsample_test(state_fnames_list)
+
+    XM_MIN_BIN_CNT = 5
+    (XM_NUM_MODES, XM_MAX_MODE, XM_AVG_MODES, XM_AVG_BELOW, XM_ALL_MODES) = \
+               (10,       False,        True,         False,         True)
+    subsample_test(state_fnames_list)
+
+    XM_MIN_BIN_CNT = 10
+    (XM_NUM_MODES, XM_MAX_MODE, XM_AVG_MODES, XM_AVG_BELOW, XM_ALL_MODES) = \
+               (10,       False,        True,         False,         True)
+    subsample_test(state_fnames_list)
+
+    XM_MIN_BIN_CNT = 20
+    (XM_NUM_MODES, XM_MAX_MODE, XM_AVG_MODES, XM_AVG_BELOW, XM_ALL_MODES) = \
+               (10,       False,        True,         False,         True)
+    subsample_test(state_fnames_list)
+
+    XM_MIN_BIN_CNT = 30
+    (XM_NUM_MODES, XM_MAX_MODE, XM_AVG_MODES, XM_AVG_BELOW, XM_ALL_MODES) = \
+               (10,       False,        True,         False,         True)
+    subsample_test(state_fnames_list)
+
+    XM_MIN_BIN_CNT = 50
+    (XM_NUM_MODES, XM_MAX_MODE, XM_AVG_MODES, XM_AVG_BELOW, XM_ALL_MODES) = \
+               (10,       False,        True,         False,         True)
+    subsample_test(state_fnames_list)
+
+    XM_MIN_BIN_CNT = 0
+    (XM_NUM_MODES, XM_MAX_MODE, XM_AVG_MODES, XM_AVG_BELOW, XM_ALL_MODES) = \
+               (15,       False,        True,         True,         True)
+    subsample_test(state_fnames_list)
+
+    (XM_NUM_MODES, XM_MAX_MODE, XM_AVG_MODES, XM_AVG_BELOW, XM_ALL_MODES) = \
+               (15,       True,         False,         True,         True)
+    subsample_test(state_fnames_list)
+
+    XM_MIN_BIN_CNT = 0
+    (XM_NUM_MODES, XM_MAX_MODE, XM_AVG_MODES, XM_AVG_BELOW, XM_ALL_MODES) = \
+               (15,       False,        True,         False,         True)
+    subsample_test(state_fnames_list)
+
+    XM_MIN_BIN_CNT = 5
+    (XM_NUM_MODES, XM_MAX_MODE, XM_AVG_MODES, XM_AVG_BELOW, XM_ALL_MODES) = \
+               (15,       False,        True,         False,         True)
+    subsample_test(state_fnames_list)
+
+    XM_MIN_BIN_CNT = 10
+    (XM_NUM_MODES, XM_MAX_MODE, XM_AVG_MODES, XM_AVG_BELOW, XM_ALL_MODES) = \
+               (15,       False,        True,         False,         True)
+    subsample_test(state_fnames_list)
+
+    XM_MIN_BIN_CNT = 20
+    (XM_NUM_MODES, XM_MAX_MODE, XM_AVG_MODES, XM_AVG_BELOW, XM_ALL_MODES) = \
+               (15,       False,        True,         False,         True)
+    subsample_test(state_fnames_list)
+
+    XM_MIN_BIN_CNT = 30
+    (XM_NUM_MODES, XM_MAX_MODE, XM_AVG_MODES, XM_AVG_BELOW, XM_ALL_MODES) = \
+               (15,       False,        True,         False,         True)
+    subsample_test(state_fnames_list)
+
+    XM_MIN_BIN_CNT = 50
+    (XM_NUM_MODES, XM_MAX_MODE, XM_AVG_MODES, XM_AVG_BELOW, XM_ALL_MODES) = \
+               (15,       False,        True,         False,         True)
+    subsample_test(state_fnames_list)
+
+    XM_MIN_BIN_CNT = 0
+    (XM_NUM_MODES, XM_MAX_MODE, XM_AVG_MODES, XM_AVG_BELOW, XM_ALL_MODES) = \
+               (20,       False,        True,         False,         True)
+    subsample_test(state_fnames_list)
+
+    (XM_NUM_MODES, XM_MAX_MODE, XM_AVG_MODES, XM_AVG_BELOW, XM_ALL_MODES) = \
+               (20,       True,         False,         True,         True)
+    subsample_test(state_fnames_list)
+
+    (XM_NUM_MODES, XM_MAX_MODE, XM_AVG_MODES, XM_AVG_BELOW, XM_ALL_MODES) = \
+               (20,       False,        True,         True,         True)
+    subsample_test(state_fnames_list)
+
+    # Final choice for plot
+    XM_MIN_BIN_CNT = 0
+    (XM_NUM_MODES, XM_MAX_MODE, XM_AVG_MODES, XM_AVG_BELOW, XM_ALL_MODES) = \
+               (10,       False,        True,         False,         True)
     plot_all(state_fnames_list)
 
 if __name__ == '__main__':
