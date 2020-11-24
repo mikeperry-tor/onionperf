@@ -1,261 +1,725 @@
 
-Timeout test with XM_NUM_MODES=3; XM_MAX_MODE=0 XM_AVG_MODES=1; XM_AVG_BELOW=0; XM_ALL_MODES=0
-state-close-100 60 avg/dev error: 0.026904/0.018644
-state-close-100 70 avg/dev error: 0.029702/0.018153
-state-close-100 80 avg/dev error: 0.080924/0.026799
-state-close-500 60 avg/dev error: 0.025233/0.008692
-state-close-500 70 avg/dev error: 0.027198/0.005518
-state-close-500 80 avg/dev error: 0.085032/0.009332
-state-close-1000 60 avg/dev error: 0.021086/0.000000
-state-close-1000 70 avg/dev error: 0.026722/0.000000
-state-close-1000 80 avg/dev error: 0.087056/0.000000
-state-far-100 60 avg/dev error: 0.034278/0.025410
-state-far-100 70 avg/dev error: 0.030147/0.021745
-state-far-100 80 avg/dev error: 0.029009/0.023026
-state-far-500 60 avg/dev error: 0.027245/0.011203
-state-far-500 70 avg/dev error: 0.011789/0.007674
-state-far-500 80 avg/dev error: 0.014461/0.010219
-state-far-1000 60 avg/dev error: 0.036269/0.000000
-state-far-1000 70 avg/dev error: 0.009845/0.000000
-state-far-1000 80 avg/dev error: 0.017617/0.000000
-state-mixed-100 60 avg/dev error: 0.311207/0.010465
-state-mixed-100 70 avg/dev error: 0.124905/0.104439
-state-mixed-100 80 avg/dev error: 0.144769/0.016719
-state-mixed-500 60 avg/dev error: 0.312935/0.002811
-state-mixed-500 70 avg/dev error: 0.053724/0.044034
-state-mixed-500 80 avg/dev error: 0.149213/0.002527
-state-mixed-1000 60 avg/dev error: 0.265988/0.000000
-state-mixed-1000 70 avg/dev error: 0.040122/0.000000
-state-mixed-1000 80 avg/dev error: 0.061507/0.000000
+Timeout test with XM_NUM_MODES=3; XM_MAX_MODE=0 XM_AVG_MODES=1; XM_AVG_BELOW=1; XM_ALL_MODES=1 XM_MIN_BIN_CNT=0
+state-close    100 60 avg/max/dev error: 0.018179/0.077/0.015
+state-close    100 70 avg/max/dev error: 0.032590/0.111/0.020
+state-close    100 80 avg/max/dev error: 0.065490/0.141/0.030
+state-close    500 60 avg/max/dev error: 0.005646/0.029/0.004
+state-close    500 70 avg/max/dev error: 0.030643/0.064/0.007
+state-close    500 80 avg/max/dev error: 0.068191/0.103/0.013
+state-close   1000 60 avg/max/dev error: 0.001879/0.002/0.000
+state-close   1000 70 avg/max/dev error: 0.028810/0.029/0.000
+state-close   1000 80 avg/max/dev error: 0.067223/0.067/0.000
+state-far      100 60 avg/max/dev error: 0.030898/0.134/0.024
+state-far      100 70 avg/max/dev error: 0.030800/0.109/0.022
+state-far      100 80 avg/max/dev error: 0.027968/0.134/0.022
+state-far      500 60 avg/max/dev error: 0.022926/0.065/0.011
+state-far      500 70 avg/max/dev error: 0.011773/0.050/0.008
+state-far      500 80 avg/max/dev error: 0.011034/0.048/0.008
+state-far     1000 60 avg/max/dev error: 0.020725/0.021/0.000
+state-far     1000 70 avg/max/dev error: 0.009845/0.010/0.000
+state-far     1000 80 avg/max/dev error: 0.006218/0.006/0.000
+state-mixed    100 60 avg/max/dev error: 0.300793/0.332/0.014
+state-mixed    100 70 avg/max/dev error: 0.144728/0.393/0.112
+state-mixed    100 80 avg/max/dev error: 0.116276/0.163/0.031
+state-mixed    500 60 avg/max/dev error: 0.300644/0.314/0.005
+state-mixed    500 70 avg/max/dev error: 0.087859/0.308/0.055
+state-mixed    500 80 avg/max/dev error: 0.124710/0.150/0.013
+state-mixed   1000 60 avg/max/dev error: 0.297556/0.298/0.000
+state-mixed   1000 70 avg/max/dev error: 0.082892/0.083/0.000
+state-mixed   1000 80 avg/max/dev error: 0.127699/0.128/0.000
 
-Timeout test with XM_NUM_MODES=3; XM_MAX_MODE=0 XM_AVG_MODES=1; XM_AVG_BELOW=1; XM_ALL_MODES=1
-state-close-100 60 avg/dev error: 0.017900/0.015353
-state-close-100 70 avg/dev error: 0.034816/0.021239
-state-close-100 80 avg/dev error: 0.068451/0.029162
-state-close-500 60 avg/dev error: 0.005617/0.003907
-state-close-500 70 avg/dev error: 0.030811/0.006625
-state-close-500 80 avg/dev error: 0.068322/0.012575
-state-close-1000 60 avg/dev error: 0.001879/0.000000
-state-close-1000 70 avg/dev error: 0.028810/0.000000
-state-close-1000 80 avg/dev error: 0.067223/0.000000
-state-far-100 60 avg/dev error: 0.032708/0.024909
-state-far-100 70 avg/dev error: 0.030404/0.021966
-state-far-100 80 avg/dev error: 0.027366/0.022625
-state-far-500 60 avg/dev error: 0.024145/0.010648
-state-far-500 70 avg/dev error: 0.011813/0.007597
-state-far-500 80 avg/dev error: 0.011790/0.009058
-state-far-1000 60 avg/dev error: 0.020725/0.000000
-state-far-1000 70 avg/dev error: 0.009845/0.000000
-state-far-1000 80 avg/dev error: 0.009326/0.000000
-state-mixed-100 60 avg/dev error: 0.300005/0.013439
-state-mixed-100 70 avg/dev error: 0.134329/0.109460
-state-mixed-100 80 avg/dev error: 0.120878/0.030069
-state-mixed-500 60 avg/dev error: 0.301662/0.005307
-state-mixed-500 70 avg/dev error: 0.087217/0.055615
-state-mixed-500 80 avg/dev error: 0.127318/0.012202
-state-mixed-1000 60 avg/dev error: 0.301629/0.000000
-state-mixed-1000 70 avg/dev error: 0.082892/0.000000
-state-mixed-1000 80 avg/dev error: 0.129735/0.000000
+Timeout test with XM_NUM_MODES=3; XM_MAX_MODE=1 XM_AVG_MODES=0; XM_AVG_BELOW=1; XM_ALL_MODES=1 XM_MIN_BIN_CNT=0
+state-close    100 60 avg/max/dev error: 0.018793/0.090/0.016
+state-close    100 70 avg/max/dev error: 0.032642/0.118/0.020
+state-close    100 80 avg/max/dev error: 0.072444/0.160/0.029
+state-close    500 60 avg/max/dev error: 0.008151/0.036/0.006
+state-close    500 70 avg/max/dev error: 0.030873/0.052/0.007
+state-close    500 80 avg/max/dev error: 0.077295/0.103/0.012
+state-close   1000 60 avg/max/dev error: 0.006472/0.006/0.000
+state-close   1000 70 avg/max/dev error: 0.028810/0.029/0.000
+state-close   1000 80 avg/max/dev error: 0.077662/0.078/0.000
+state-far      100 60 avg/max/dev error: 0.032592/0.125/0.025
+state-far      100 70 avg/max/dev error: 0.031224/0.129/0.022
+state-far      100 80 avg/max/dev error: 0.028607/0.163/0.024
+state-far      500 60 avg/max/dev error: 0.024188/0.062/0.011
+state-far      500 70 avg/max/dev error: 0.011619/0.046/0.007
+state-far      500 80 avg/max/dev error: 0.012862/0.054/0.010
+state-far     1000 60 avg/max/dev error: 0.023834/0.024/0.000
+state-far     1000 70 avg/max/dev error: 0.009845/0.010/0.000
+state-far     1000 80 avg/max/dev error: 0.009326/0.009/0.000
+state-mixed    100 60 avg/max/dev error: 0.152801/0.281/0.085
+state-mixed    100 70 avg/max/dev error: 0.072168/0.355/0.056
+state-mixed    100 80 avg/max/dev error: 0.046038/0.173/0.023
+state-mixed    500 60 avg/max/dev error: 0.154463/0.251/0.044
+state-mixed    500 70 avg/max/dev error: 0.027047/0.085/0.018
+state-mixed    500 80 avg/max/dev error: 0.045833/0.069/0.006
+state-mixed   1000 60 avg/max/dev error: 0.143788/0.144/0.000
+state-mixed   1000 70 avg/max/dev error: 0.021996/0.022/0.000
+state-mixed   1000 80 avg/max/dev error: 0.046232/0.046/0.000
 
-Timeout test with XM_NUM_MODES=3; XM_MAX_MODE=0 XM_AVG_MODES=0; XM_AVG_BELOW=1; XM_ALL_MODES=1
-state-close-100 60 avg/dev error: 0.017928/0.015353
-state-close-100 70 avg/dev error: 0.032433/0.020391
-state-close-100 80 avg/dev error: 0.060119/0.029369
-state-close-500 60 avg/dev error: 0.005846/0.004009
-state-close-500 70 avg/dev error: 0.029930/0.006292
-state-close-500 80 avg/dev error: 0.059813/0.012104
-state-close-1000 60 avg/dev error: 0.005010/0.000000
-state-close-1000 70 avg/dev error: 0.028810/0.000000
-state-close-1000 80 avg/dev error: 0.060960/0.000000
-state-far-100 60 avg/dev error: 0.030910/0.024324
-state-far-100 70 avg/dev error: 0.030669/0.021223
-state-far-100 80 avg/dev error: 0.027622/0.021390
-state-far-500 60 avg/dev error: 0.023755/0.010729
-state-far-500 70 avg/dev error: 0.012231/0.007891
-state-far-500 80 avg/dev error: 0.010451/0.008180
-state-far-1000 60 avg/dev error: 0.020725/0.000000
-state-far-1000 70 avg/dev error: 0.009845/0.000000
-state-far-1000 80 avg/dev error: 0.006218/0.000000
-state-mixed-100 60 avg/dev error: 0.312380/0.010927
-state-mixed-100 70 avg/dev error: 0.118126/0.096388
-state-mixed-100 80 avg/dev error: 0.150154/0.013235
-state-mixed-500 60 avg/dev error: 0.314333/0.002717
-state-mixed-500 70 avg/dev error: 0.041446/0.037613
-state-mixed-500 80 avg/dev error: 0.152057/0.002702
-state-mixed-1000 60 avg/dev error: 0.314868/0.000000
-state-mixed-1000 70 avg/dev error: 0.009572/0.000000
-state-mixed-1000 80 avg/dev error: 0.151120/0.000000
+Timeout test with XM_NUM_MODES=5; XM_MAX_MODE=0 XM_AVG_MODES=1; XM_AVG_BELOW=0; XM_ALL_MODES=1 XM_MIN_BIN_CNT=0
+state-close    100 60 avg/max/dev error: 0.021816/0.086/0.018
+state-close    100 70 avg/max/dev error: 0.032891/0.105/0.020
+state-close    100 80 avg/max/dev error: 0.078748/0.149/0.029
+state-close    500 60 avg/max/dev error: 0.015410/0.040/0.009
+state-close    500 70 avg/max/dev error: 0.029340/0.052/0.006
+state-close    500 80 avg/max/dev error: 0.082290/0.106/0.011
+state-close   1000 60 avg/max/dev error: 0.011691/0.012/0.000
+state-close   1000 70 avg/max/dev error: 0.028810/0.029/0.000
+state-close   1000 80 avg/max/dev error: 0.084969/0.085/0.000
+state-far      100 60 avg/max/dev error: 0.034150/0.130/0.026
+state-far      100 70 avg/max/dev error: 0.030927/0.112/0.021
+state-far      100 80 avg/max/dev error: 0.029079/0.144/0.023
+state-far      500 60 avg/max/dev error: 0.026259/0.062/0.011
+state-far      500 70 avg/max/dev error: 0.011735/0.044/0.008
+state-far      500 80 avg/max/dev error: 0.014553/0.054/0.010
+state-far     1000 60 avg/max/dev error: 0.023834/0.024/0.000
+state-far     1000 70 avg/max/dev error: 0.004663/0.005/0.000
+state-far     1000 80 avg/max/dev error: 0.010363/0.010/0.000
+state-mixed    100 60 avg/max/dev error: 0.153280/0.266/0.078
+state-mixed    100 70 avg/max/dev error: 0.062697/0.308/0.046
+state-mixed    100 80 avg/max/dev error: 0.047142/0.122/0.022
+state-mixed    500 60 avg/max/dev error: 0.158790/0.247/0.037
+state-mixed    500 70 avg/max/dev error: 0.027030/0.083/0.018
+state-mixed    500 80 avg/max/dev error: 0.046443/0.068/0.006
+state-mixed   1000 60 avg/max/dev error: 0.161100/0.161/0.000
+state-mixed   1000 70 avg/max/dev error: 0.021996/0.022/0.000
+state-mixed   1000 80 avg/max/dev error: 0.047251/0.047/0.000
 
-Timeout test with XM_NUM_MODES=3; XM_MAX_MODE=1 XM_AVG_MODES=0; XM_AVG_BELOW=1; XM_ALL_MODES=1
-state-close-100 60 avg/dev error: 0.019285/0.015810
-state-close-100 70 avg/dev error: 0.034212/0.021242
-state-close-100 80 avg/dev error: 0.074132/0.029416
-state-close-500 60 avg/dev error: 0.008056/0.005868
-state-close-500 70 avg/dev error: 0.031196/0.007010
-state-close-500 80 avg/dev error: 0.077853/0.011724
-state-close-1000 60 avg/dev error: 0.006472/0.000000
-state-close-1000 70 avg/dev error: 0.028810/0.000000
-state-close-1000 80 avg/dev error: 0.077662/0.000000
-state-far-100 60 avg/dev error: 0.032431/0.024650
-state-far-100 70 avg/dev error: 0.030047/0.021229
-state-far-100 80 avg/dev error: 0.029326/0.023439
-state-far-500 60 avg/dev error: 0.026746/0.010891
-state-far-500 70 avg/dev error: 0.011577/0.007380
-state-far-500 80 avg/dev error: 0.013641/0.009958
-state-far-1000 60 avg/dev error: 0.023834/0.000000
-state-far-1000 70 avg/dev error: 0.009845/0.000000
-state-far-1000 80 avg/dev error: 0.010363/0.000000
-state-mixed-100 60 avg/dev error: 0.150905/0.084192
-state-mixed-100 70 avg/dev error: 0.067642/0.053457
-state-mixed-100 80 avg/dev error: 0.046976/0.022403
-state-mixed-500 60 avg/dev error: 0.153220/0.044917
-state-mixed-500 70 avg/dev error: 0.027733/0.018865
-state-mixed-500 80 avg/dev error: 0.045941/0.005912
-state-mixed-1000 60 avg/dev error: 0.143788/0.000000
-state-mixed-1000 70 avg/dev error: 0.021996/0.000000
-state-mixed-1000 80 avg/dev error: 0.046232/0.000000
+Timeout test with XM_NUM_MODES=5; XM_MAX_MODE=1 XM_AVG_MODES=0; XM_AVG_BELOW=1; XM_ALL_MODES=1 XM_MIN_BIN_CNT=0
+state-close    100 60 avg/max/dev error: 0.018091/0.077/0.015
+state-close    100 70 avg/max/dev error: 0.033999/0.111/0.020
+state-close    100 80 avg/max/dev error: 0.074587/0.149/0.028
+state-close    500 60 avg/max/dev error: 0.008026/0.029/0.006
+state-close    500 70 avg/max/dev error: 0.030632/0.052/0.006
+state-close    500 80 avg/max/dev error: 0.077326/0.102/0.012
+state-close   1000 60 avg/max/dev error: 0.006472/0.006/0.000
+state-close   1000 70 avg/max/dev error: 0.028810/0.029/0.000
+state-close   1000 80 avg/max/dev error: 0.077662/0.078/0.000
+state-far      100 60 avg/max/dev error: 0.032272/0.117/0.024
+state-far      100 70 avg/max/dev error: 0.031619/0.116/0.022
+state-far      100 80 avg/max/dev error: 0.029770/0.144/0.025
+state-far      500 60 avg/max/dev error: 0.024199/0.060/0.011
+state-far      500 70 avg/max/dev error: 0.011502/0.044/0.007
+state-far      500 80 avg/max/dev error: 0.012640/0.048/0.009
+state-far     1000 60 avg/max/dev error: 0.023834/0.024/0.000
+state-far     1000 70 avg/max/dev error: 0.009845/0.010/0.000
+state-far     1000 80 avg/max/dev error: 0.009326/0.009/0.000
+state-mixed    100 60 avg/max/dev error: 0.191357/0.293/0.078
+state-mixed    100 70 avg/max/dev error: 0.074158/0.343/0.060
+state-mixed    100 80 avg/max/dev error: 0.050047/0.142/0.024
+state-mixed    500 60 avg/max/dev error: 0.209652/0.262/0.035
+state-mixed    500 70 avg/max/dev error: 0.024665/0.119/0.018
+state-mixed    500 80 avg/max/dev error: 0.049849/0.076/0.006
+state-mixed   1000 60 avg/max/dev error: 0.223218/0.223/0.000
+state-mixed   1000 70 avg/max/dev error: 0.006721/0.007/0.000
+state-mixed   1000 80 avg/max/dev error: 0.050305/0.050/0.000
 
-Timeout test with XM_NUM_MODES=5; XM_MAX_MODE=1 XM_AVG_MODES=0; XM_AVG_BELOW=1; XM_ALL_MODES=1
-state-close-100 60 avg/dev error: 0.017521/0.015121
-state-close-100 70 avg/dev error: 0.034445/0.019866
-state-close-100 80 avg/dev error: 0.075615/0.027544
-state-close-500 60 avg/dev error: 0.008331/0.005879
-state-close-500 70 avg/dev error: 0.030511/0.006397
-state-close-500 80 avg/dev error: 0.076668/0.011634
-state-close-1000 60 avg/dev error: 0.006472/0.000000
-state-close-1000 70 avg/dev error: 0.028810/0.000000
-state-close-1000 80 avg/dev error: 0.077662/0.000000
-state-far-100 60 avg/dev error: 0.037200/0.026066
-state-far-100 70 avg/dev error: 0.029543/0.021210
-state-far-100 80 avg/dev error: 0.031268/0.025091
-state-far-500 60 avg/dev error: 0.034303/0.011307
-state-far-500 70 avg/dev error: 0.012070/0.007730
-state-far-500 80 avg/dev error: 0.017613/0.010945
-state-far-1000 60 avg/dev error: 0.037306/0.000000
-state-far-1000 70 avg/dev error: 0.009845/0.000000
-state-far-1000 80 avg/dev error: 0.018653/0.000000
-state-mixed-100 60 avg/dev error: 0.154244/0.083766
-state-mixed-100 70 avg/dev error: 0.068084/0.054696
-state-mixed-100 80 avg/dev error: 0.045669/0.021629
-state-mixed-500 60 avg/dev error: 0.152781/0.045178
-state-mixed-500 70 avg/dev error: 0.028102/0.018576
-state-mixed-500 80 avg/dev error: 0.045971/0.005884
-state-mixed-1000 60 avg/dev error: 0.143788/0.000000
-state-mixed-1000 70 avg/dev error: 0.021996/0.000000
-state-mixed-1000 80 avg/dev error: 0.046232/0.000000
+Timeout test with XM_NUM_MODES=5; XM_MAX_MODE=0 XM_AVG_MODES=1; XM_AVG_BELOW=1; XM_ALL_MODES=1 XM_MIN_BIN_CNT=0
+state-close    100 60 avg/max/dev error: 0.017591/0.090/0.015
+state-close    100 70 avg/max/dev error: 0.032822/0.118/0.021
+state-close    100 80 avg/max/dev error: 0.063876/0.141/0.029
+state-close    500 60 avg/max/dev error: 0.005583/0.024/0.004
+state-close    500 70 avg/max/dev error: 0.030193/0.060/0.007
+state-close    500 80 avg/max/dev error: 0.064751/0.101/0.013
+state-close   1000 60 avg/max/dev error: 0.001879/0.002/0.000
+state-close   1000 70 avg/max/dev error: 0.028810/0.029/0.000
+state-close   1000 80 avg/max/dev error: 0.066180/0.066/0.000
+state-far      100 60 avg/max/dev error: 0.030020/0.134/0.024
+state-far      100 70 avg/max/dev error: 0.029883/0.110/0.021
+state-far      100 80 avg/max/dev error: 0.027002/0.125/0.021
+state-far      500 60 avg/max/dev error: 0.022266/0.060/0.010
+state-far      500 70 avg/max/dev error: 0.011954/0.046/0.008
+state-far      500 80 avg/max/dev error: 0.010353/0.042/0.008
+state-far     1000 60 avg/max/dev error: 0.020725/0.021/0.000
+state-far     1000 70 avg/max/dev error: 0.009845/0.010/0.000
+state-far     1000 80 avg/max/dev error: 0.005181/0.005/0.000
+state-mixed    100 60 avg/max/dev error: 0.293918/0.327/0.015
+state-mixed    100 70 avg/max/dev error: 0.138954/0.378/0.112
+state-mixed    100 80 avg/max/dev error: 0.104973/0.161/0.034
+state-mixed    500 60 avg/max/dev error: 0.294347/0.311/0.005
+state-mixed    500 70 avg/max/dev error: 0.085332/0.261/0.054
+state-mixed    500 80 avg/max/dev error: 0.109894/0.142/0.014
+state-mixed   1000 60 avg/max/dev error: 0.295519/0.296/0.000
+state-mixed   1000 70 avg/max/dev error: 0.082892/0.083/0.000
+state-mixed   1000 80 avg/max/dev error: 0.109369/0.109/0.000
 
-Timeout test with XM_NUM_MODES=7; XM_MAX_MODE=1 XM_AVG_MODES=0; XM_AVG_BELOW=1; XM_ALL_MODES=1
-state-close-100 60 avg/dev error: 0.018923/0.015454
-state-close-100 70 avg/dev error: 0.034268/0.020966
-state-close-100 80 avg/dev error: 0.074428/0.028593
-state-close-500 60 avg/dev error: 0.008129/0.006077
-state-close-500 70 avg/dev error: 0.030841/0.006479
-state-close-500 80 avg/dev error: 0.077280/0.011533
-state-close-1000 60 avg/dev error: 0.006472/0.000000
-state-close-1000 70 avg/dev error: 0.028810/0.000000
-state-close-1000 80 avg/dev error: 0.077662/0.000000
-state-far-100 60 avg/dev error: 0.042649/0.027997
-state-far-100 70 avg/dev error: 0.029145/0.019866
-state-far-100 80 avg/dev error: 0.031249/0.024009
-state-far-500 60 avg/dev error: 0.041079/0.010897
-state-far-500 70 avg/dev error: 0.012427/0.007974
-state-far-500 80 avg/dev error: 0.020128/0.010973
-state-far-1000 60 avg/dev error: 0.041451/0.000000
-state-far-1000 70 avg/dev error: 0.010881/0.000000
-state-far-1000 80 avg/dev error: 0.019689/0.000000
-state-mixed-100 60 avg/dev error: 0.152793/0.085028
-state-mixed-100 70 avg/dev error: 0.068973/0.054801
-state-mixed-100 80 avg/dev error: 0.045791/0.021958
-state-mixed-500 60 avg/dev error: 0.150971/0.042976
-state-mixed-500 70 avg/dev error: 0.027944/0.018237
-state-mixed-500 80 avg/dev error: 0.046414/0.005495
-state-mixed-1000 60 avg/dev error: 0.143788/0.000000
-state-mixed-1000 70 avg/dev error: 0.021996/0.000000
-state-mixed-1000 80 avg/dev error: 0.046232/0.000000
+Timeout test with XM_NUM_MODES=7; XM_MAX_MODE=0 XM_AVG_MODES=1; XM_AVG_BELOW=0; XM_ALL_MODES=1 XM_MIN_BIN_CNT=0
+state-close    100 60 avg/max/dev error: 0.017545/0.077/0.015
+state-close    100 70 avg/max/dev error: 0.034139/0.111/0.020
+state-close    100 80 avg/max/dev error: 0.075880/0.149/0.028
+state-close    500 60 avg/max/dev error: 0.008545/0.036/0.006
+state-close    500 70 avg/max/dev error: 0.030658/0.052/0.007
+state-close    500 80 avg/max/dev error: 0.077463/0.103/0.012
+state-close   1000 60 avg/max/dev error: 0.006472/0.006/0.000
+state-close   1000 70 avg/max/dev error: 0.028810/0.029/0.000
+state-close   1000 80 avg/max/dev error: 0.077662/0.078/0.000
+state-far      100 60 avg/max/dev error: 0.032292/0.121/0.025
+state-far      100 70 avg/max/dev error: 0.029462/0.126/0.022
+state-far      100 80 avg/max/dev error: 0.030882/0.163/0.024
+state-far      500 60 avg/max/dev error: 0.028601/0.062/0.011
+state-far      500 70 avg/max/dev error: 0.011521/0.044/0.007
+state-far      500 80 avg/max/dev error: 0.015453/0.048/0.010
+state-far     1000 60 avg/max/dev error: 0.027979/0.028/0.000
+state-far     1000 70 avg/max/dev error: 0.009845/0.010/0.000
+state-far     1000 80 avg/max/dev error: 0.012435/0.012/0.000
+state-mixed    100 60 avg/max/dev error: 0.073479/0.251/0.056
+state-mixed    100 70 avg/max/dev error: 0.061251/0.212/0.039
+state-mixed    100 80 avg/max/dev error: 0.041863/0.140/0.021
+state-mixed    500 60 avg/max/dev error: 0.033185/0.144/0.026
+state-mixed    500 70 avg/max/dev error: 0.046437/0.105/0.020
+state-mixed    500 80 avg/max/dev error: 0.040924/0.062/0.007
+state-mixed   1000 60 avg/max/dev error: 0.018534/0.019/0.000
+state-mixed   1000 70 avg/max/dev error: 0.046436/0.046/0.000
+state-mixed   1000 80 avg/max/dev error: 0.042159/0.042/0.000
 
-Timeout test with XM_NUM_MODES=10; XM_MAX_MODE=1 XM_AVG_MODES=0; XM_AVG_BELOW=1; XM_ALL_MODES=1
-state-close-100 60 avg/dev error: 0.018496/0.014695
-state-close-100 70 avg/dev error: 0.033887/0.020471
-state-close-100 80 avg/dev error: 0.074559/0.028009
-state-close-500 60 avg/dev error: 0.008245/0.005832
-state-close-500 70 avg/dev error: 0.030697/0.006515
-state-close-500 80 avg/dev error: 0.077003/0.011682
-state-close-1000 60 avg/dev error: 0.006472/0.000000
-state-close-1000 70 avg/dev error: 0.028810/0.000000
-state-close-1000 80 avg/dev error: 0.077662/0.000000
-state-far-100 60 avg/dev error: 0.054707/0.030396
-state-far-100 70 avg/dev error: 0.031309/0.021206
-state-far-100 80 avg/dev error: 0.031714/0.025702
-state-far-500 60 avg/dev error: 0.054470/0.011197
-state-far-500 70 avg/dev error: 0.016601/0.009393
-state-far-500 80 avg/dev error: 0.020319/0.011260
-state-far-1000 60 avg/dev error: 0.055959/0.000000
-state-far-1000 70 avg/dev error: 0.013990/0.000000
-state-far-1000 80 avg/dev error: 0.019689/0.000000
-state-mixed-100 60 avg/dev error: 0.144204/0.085449
-state-mixed-100 70 avg/dev error: 0.068940/0.051353
-state-mixed-100 80 avg/dev error: 0.047387/0.022552
-state-mixed-500 60 avg/dev error: 0.154218/0.043434
-state-mixed-500 70 avg/dev error: 0.027410/0.018491
-state-mixed-500 80 avg/dev error: 0.045765/0.005961
-state-mixed-1000 60 avg/dev error: 0.143788/0.000000
-state-mixed-1000 70 avg/dev error: 0.021996/0.000000
-state-mixed-1000 80 avg/dev error: 0.046232/0.000000
+Timeout test with XM_NUM_MODES=10; XM_MAX_MODE=0 XM_AVG_MODES=1; XM_AVG_BELOW=1; XM_ALL_MODES=1 XM_MIN_BIN_CNT=0
+state-close    100 60 avg/max/dev error: 0.018565/0.120/0.016
+state-close    100 70 avg/max/dev error: 0.032469/0.124/0.021
+state-close    100 80 avg/max/dev error: 0.057772/0.147/0.029
+state-close    500 60 avg/max/dev error: 0.006770/0.029/0.005
+state-close    500 70 avg/max/dev error: 0.029487/0.052/0.006
+state-close    500 80 avg/max/dev error: 0.056020/0.090/0.012
+state-close   1000 60 avg/max/dev error: 0.005010/0.005/0.000
+state-close   1000 70 avg/max/dev error: 0.028810/0.029/0.000
+state-close   1000 80 avg/max/dev error: 0.054697/0.055/0.000
+state-far      100 60 avg/max/dev error: 0.031301/0.146/0.024
+state-far      100 70 avg/max/dev error: 0.031558/0.116/0.022
+state-far      100 80 avg/max/dev error: 0.028662/0.131/0.022
+state-far      500 60 avg/max/dev error: 0.023035/0.060/0.011
+state-far      500 70 avg/max/dev error: 0.011846/0.044/0.008
+state-far      500 80 avg/max/dev error: 0.010659/0.042/0.008
+state-far     1000 60 avg/max/dev error: 0.020725/0.021/0.000
+state-far     1000 70 avg/max/dev error: 0.009845/0.010/0.000
+state-far     1000 80 avg/max/dev error: 0.006218/0.006/0.000
+state-mixed    100 60 avg/max/dev error: 0.280898/0.321/0.023
+state-mixed    100 70 avg/max/dev error: 0.132677/0.375/0.108
+state-mixed    100 80 avg/max/dev error: 0.086514/0.154/0.033
+state-mixed    500 60 avg/max/dev error: 0.281010/0.298/0.005
+state-mixed    500 70 avg/max/dev error: 0.075127/0.279/0.048
+state-mixed    500 80 avg/max/dev error: 0.084624/0.122/0.013
+state-mixed   1000 60 avg/max/dev error: 0.278208/0.278/0.000
+state-mixed   1000 70 avg/max/dev error: 0.072709/0.073/0.000
+state-mixed   1000 80 avg/max/dev error: 0.084929/0.085/0.000
 
-Timeout test with XM_NUM_MODES=15; XM_MAX_MODE=1 XM_AVG_MODES=0; XM_AVG_BELOW=1; XM_ALL_MODES=1
-state-close-100 60 avg/dev error: 0.019563/0.015695
-state-close-100 70 avg/dev error: 0.032976/0.020379
-state-close-100 80 avg/dev error: 0.072944/0.028680
-state-close-500 60 avg/dev error: 0.008015/0.005989
-state-close-500 70 avg/dev error: 0.031075/0.006529
-state-close-500 80 avg/dev error: 0.077688/0.011448
-state-close-1000 60 avg/dev error: 0.006472/0.000000
-state-close-1000 70 avg/dev error: 0.028810/0.000000
-state-close-1000 80 avg/dev error: 0.077662/0.000000
-state-far-100 60 avg/dev error: 0.148609/0.029144
-state-far-100 70 avg/dev error: 0.075125/0.028190
-state-far-100 80 avg/dev error: 0.023833/0.017373
-state-far-500 60 avg/dev error: 0.150349/0.008864
-state-far-500 70 avg/dev error: 0.074983/0.009882
-state-far-500 80 avg/dev error: 0.009533/0.006170
-state-far-1000 60 avg/dev error: 0.150259/0.000000
-state-far-1000 70 avg/dev error: 0.077202/0.000000
-state-far-1000 80 avg/dev error: 0.009326/0.000000
-state-mixed-100 60 avg/dev error: 0.151123/0.084247
-state-mixed-100 70 avg/dev error: 0.069976/0.055026
-state-mixed-100 80 avg/dev error: 0.045436/0.022860
-state-mixed-500 60 avg/dev error: 0.151487/0.042588
-state-mixed-500 70 avg/dev error: 0.026643/0.018290
-state-mixed-500 80 avg/dev error: 0.045955/0.005485
-state-mixed-1000 60 avg/dev error: 0.143788/0.000000
-state-mixed-1000 70 avg/dev error: 0.021996/0.000000
-state-mixed-1000 80 avg/dev error: 0.046232/0.000000
+Timeout test with XM_NUM_MODES=10; XM_MAX_MODE=1 XM_AVG_MODES=0; XM_AVG_BELOW=1; XM_ALL_MODES=1 XM_MIN_BIN_CNT=0
+state-close    100 60 avg/max/dev error: 0.018414/0.090/0.015
+state-close    100 70 avg/max/dev error: 0.034079/0.118/0.020
+state-close    100 80 avg/max/dev error: 0.074490/0.152/0.028
+state-close    500 60 avg/max/dev error: 0.008190/0.029/0.006
+state-close    500 70 avg/max/dev error: 0.030498/0.052/0.006
+state-close    500 80 avg/max/dev error: 0.076904/0.102/0.012
+state-close   1000 60 avg/max/dev error: 0.006472/0.006/0.000
+state-close   1000 70 avg/max/dev error: 0.028810/0.029/0.000
+state-close   1000 80 avg/max/dev error: 0.077662/0.078/0.000
+state-far      100 60 avg/max/dev error: 0.033563/0.138/0.025
+state-far      100 70 avg/max/dev error: 0.030964/0.119/0.022
+state-far      100 80 avg/max/dev error: 0.029628/0.158/0.024
+state-far      500 60 avg/max/dev error: 0.026198/0.060/0.011
+state-far      500 70 avg/max/dev error: 0.011508/0.038/0.007
+state-far      500 80 avg/max/dev error: 0.013885/0.052/0.010
+state-far     1000 60 avg/max/dev error: 0.023834/0.024/0.000
+state-far     1000 70 avg/max/dev error: 0.009845/0.010/0.000
+state-far     1000 80 avg/max/dev error: 0.010363/0.010/0.000
+state-mixed    100 60 avg/max/dev error: 0.143179/0.278/0.085
+state-mixed    100 70 avg/max/dev error: 0.068283/0.352/0.053
+state-mixed    100 80 avg/max/dev error: 0.044764/0.173/0.022
+state-mixed    500 60 avg/max/dev error: 0.135953/0.252/0.045
+state-mixed    500 70 avg/max/dev error: 0.030245/0.119/0.019
+state-mixed    500 80 avg/max/dev error: 0.045141/0.059/0.006
+state-mixed   1000 60 avg/max/dev error: 0.129532/0.130/0.000
+state-mixed   1000 70 avg/max/dev error: 0.026069/0.026/0.000
+state-mixed   1000 80 avg/max/dev error: 0.046232/0.046/0.000
 
-Timeout test with XM_NUM_MODES=20; XM_MAX_MODE=1 XM_AVG_MODES=0; XM_AVG_BELOW=1; XM_ALL_MODES=1
-state-close-100 60 avg/dev error: 0.018424/0.015746
-state-close-100 70 avg/dev error: 0.033828/0.020544
-state-close-100 80 avg/dev error: 0.074381/0.028609
-state-close-500 60 avg/dev error: 0.007825/0.005647
-state-close-500 70 avg/dev error: 0.030843/0.006294
-state-close-500 80 avg/dev error: 0.077593/0.011200
-state-close-1000 60 avg/dev error: 0.006472/0.000000
-state-close-1000 70 avg/dev error: 0.028810/0.000000
-state-close-1000 80 avg/dev error: 0.077662/0.000000
-state-far-100 60 avg/dev error: 0.234002/0.044843
-state-far-100 70 avg/dev error: 0.144145/0.042531
-state-far-100 80 avg/dev error: 0.060669/0.034467
-state-far-500 60 avg/dev error: 0.243375/0.013038
-state-far-500 70 avg/dev error: 0.152004/0.012499
-state-far-500 80 avg/dev error: 0.063876/0.012274
-state-far-1000 60 avg/dev error: 0.241451/0.000000
-state-far-1000 70 avg/dev error: 0.151813/0.000000
-state-far-1000 80 avg/dev error: 0.063212/0.000000
-state-mixed-100 60 avg/dev error: 0.153400/0.084875
-state-mixed-100 70 avg/dev error: 0.069249/0.058550
-state-mixed-100 80 avg/dev error: 0.045805/0.021207
-state-mixed-500 60 avg/dev error: 0.153609/0.043186
-state-mixed-500 70 avg/dev error: 0.027220/0.017983
-state-mixed-500 80 avg/dev error: 0.045918/0.005685
-state-mixed-1000 60 avg/dev error: 0.143788/0.000000
-state-mixed-1000 70 avg/dev error: 0.021996/0.000000
-state-mixed-1000 80 avg/dev error: 0.046232/0.000000
+Timeout test with XM_NUM_MODES=10; XM_MAX_MODE=0 XM_AVG_MODES=1; XM_AVG_BELOW=0; XM_ALL_MODES=1 XM_MIN_BIN_CNT=0
+state-close    100 60 avg/max/dev error: 0.019001/0.071/0.016
+state-close    100 70 avg/max/dev error: 0.033628/0.111/0.020
+state-close    100 80 avg/max/dev error: 0.074621/0.149/0.029
+state-close    500 60 avg/max/dev error: 0.008748/0.036/0.006
+state-close    500 70 avg/max/dev error: 0.030617/0.060/0.007
+state-close    500 80 avg/max/dev error: 0.078090/0.106/0.011
+state-close   1000 60 avg/max/dev error: 0.006472/0.006/0.000
+state-close   1000 70 avg/max/dev error: 0.028810/0.029/0.000
+state-close   1000 80 avg/max/dev error: 0.079749/0.080/0.000
+state-far      100 60 avg/max/dev error: 0.033094/0.148/0.024
+state-far      100 70 avg/max/dev error: 0.030176/0.116/0.021
+state-far      100 80 avg/max/dev error: 0.029750/0.138/0.024
+state-far      500 60 avg/max/dev error: 0.027388/0.065/0.011
+state-far      500 70 avg/max/dev error: 0.011377/0.046/0.007
+state-far      500 80 avg/max/dev error: 0.014938/0.048/0.010
+state-far     1000 60 avg/max/dev error: 0.027979/0.028/0.000
+state-far     1000 70 avg/max/dev error: 0.004663/0.005/0.000
+state-far     1000 80 avg/max/dev error: 0.012435/0.012/0.000
+state-mixed    100 60 avg/max/dev error: 0.066399/0.210/0.046
+state-mixed    100 70 avg/max/dev error: 0.066131/0.169/0.039
+state-mixed    100 80 avg/max/dev error: 0.038990/0.122/0.020
+state-mixed    500 60 avg/max/dev error: 0.035216/0.107/0.021
+state-mixed    500 70 avg/max/dev error: 0.059992/0.105/0.018
+state-mixed    500 80 avg/max/dev error: 0.038015/0.054/0.007
+state-mixed   1000 60 avg/max/dev error: 0.033401/0.033/0.000
+state-mixed   1000 70 avg/max/dev error: 0.065784/0.066/0.000
+state-mixed   1000 80 avg/max/dev error: 0.038086/0.038/0.000
+
+Timeout test with XM_NUM_MODES=10; XM_MAX_MODE=0 XM_AVG_MODES=1; XM_AVG_BELOW=0; XM_ALL_MODES=1 XM_MIN_BIN_CNT=5
+state-close    100 60 avg/max/dev error: 0.018414/0.073/0.016
+state-close    100 70 avg/max/dev error: 0.033343/0.111/0.020
+state-close    100 80 avg/max/dev error: 0.074635/0.147/0.029
+state-close    500 60 avg/max/dev error: 0.008945/0.036/0.006
+state-close    500 70 avg/max/dev error: 0.030332/0.052/0.006
+state-close    500 80 avg/max/dev error: 0.077585/0.103/0.012
+state-close   1000 60 avg/max/dev error: 0.006472/0.006/0.000
+state-close   1000 70 avg/max/dev error: 0.028810/0.029/0.000
+state-close   1000 80 avg/max/dev error: 0.079749/0.080/0.000
+state-far      100 60 avg/max/dev error: 0.033902/0.158/0.025
+state-far      100 70 avg/max/dev error: 0.029479/0.131/0.022
+state-far      100 80 avg/max/dev error: 0.029020/0.134/0.023
+state-far      500 60 avg/max/dev error: 0.027322/0.062/0.011
+state-far      500 70 avg/max/dev error: 0.011317/0.042/0.007
+state-far      500 80 avg/max/dev error: 0.015121/0.048/0.010
+state-far     1000 60 avg/max/dev error: 0.027979/0.028/0.000
+state-far     1000 70 avg/max/dev error: 0.004663/0.005/0.000
+state-far     1000 80 avg/max/dev error: 0.012435/0.012/0.000
+state-mixed    100 60 avg/max/dev error: 0.063686/0.208/0.044
+state-mixed    100 70 avg/max/dev error: 0.064170/0.169/0.038
+state-mixed    100 80 avg/max/dev error: 0.037947/0.110/0.019
+state-mixed    500 60 avg/max/dev error: 0.034808/0.098/0.022
+state-mixed    500 70 avg/max/dev error: 0.059631/0.101/0.018
+state-mixed    500 80 avg/max/dev error: 0.037910/0.052/0.007
+state-mixed   1000 60 avg/max/dev error: 0.033401/0.033/0.000
+state-mixed   1000 70 avg/max/dev error: 0.065784/0.066/0.000
+state-mixed   1000 80 avg/max/dev error: 0.038086/0.038/0.000
+
+Timeout test with XM_NUM_MODES=10; XM_MAX_MODE=0 XM_AVG_MODES=1; XM_AVG_BELOW=0; XM_ALL_MODES=1 XM_MIN_BIN_CNT=10
+state-close    100 60 avg/max/dev error: 0.019039/0.073/0.015
+state-close    100 70 avg/max/dev error: 0.034208/0.111/0.021
+state-close    100 80 avg/max/dev error: 0.075311/0.147/0.029
+state-close    500 60 avg/max/dev error: 0.008773/0.036/0.006
+state-close    500 70 avg/max/dev error: 0.030673/0.060/0.007
+state-close    500 80 avg/max/dev error: 0.078225/0.106/0.012
+state-close   1000 60 avg/max/dev error: 0.006472/0.006/0.000
+state-close   1000 70 avg/max/dev error: 0.028810/0.029/0.000
+state-close   1000 80 avg/max/dev error: 0.079749/0.080/0.000
+state-far      100 60 avg/max/dev error: 0.032865/0.136/0.025
+state-far      100 70 avg/max/dev error: 0.030120/0.109/0.021
+state-far      100 80 avg/max/dev error: 0.029914/0.134/0.024
+state-far      500 60 avg/max/dev error: 0.027120/0.065/0.011
+state-far      500 70 avg/max/dev error: 0.011223/0.046/0.007
+state-far      500 80 avg/max/dev error: 0.015255/0.054/0.010
+state-far     1000 60 avg/max/dev error: 0.027979/0.028/0.000
+state-far     1000 70 avg/max/dev error: 0.004663/0.005/0.000
+state-far     1000 80 avg/max/dev error: 0.012435/0.012/0.000
+state-mixed    100 60 avg/max/dev error: 0.064562/0.205/0.045
+state-mixed    100 70 avg/max/dev error: 0.064830/0.151/0.038
+state-mixed    100 80 avg/max/dev error: 0.038309/0.118/0.020
+state-mixed    500 60 avg/max/dev error: 0.036028/0.114/0.022
+state-mixed    500 70 avg/max/dev error: 0.060993/0.114/0.018
+state-mixed    500 80 avg/max/dev error: 0.038466/0.057/0.007
+state-mixed   1000 60 avg/max/dev error: 0.033401/0.033/0.000
+state-mixed   1000 70 avg/max/dev error: 0.065784/0.066/0.000
+state-mixed   1000 80 avg/max/dev error: 0.038086/0.038/0.000
+
+Timeout test with XM_NUM_MODES=10; XM_MAX_MODE=0 XM_AVG_MODES=1; XM_AVG_BELOW=0; XM_ALL_MODES=1 XM_MIN_BIN_CNT=20
+state-close    100 60 avg/max/dev error: 0.019324/0.081/0.016
+state-close    100 70 avg/max/dev error: 0.033990/0.118/0.021
+state-close    100 80 avg/max/dev error: 0.074991/0.152/0.029
+state-close    500 60 avg/max/dev error: 0.008859/0.036/0.006
+state-close    500 70 avg/max/dev error: 0.030636/0.052/0.007
+state-close    500 80 avg/max/dev error: 0.078011/0.103/0.012
+state-close   1000 60 avg/max/dev error: 0.006472/0.006/0.000
+state-close   1000 70 avg/max/dev error: 0.028810/0.029/0.000
+state-close   1000 80 avg/max/dev error: 0.079749/0.080/0.000
+state-far      100 60 avg/max/dev error: 0.032188/0.148/0.025
+state-far      100 70 avg/max/dev error: 0.030437/0.119/0.022
+state-far      100 80 avg/max/dev error: 0.030468/0.158/0.025
+state-far      500 60 avg/max/dev error: 0.026935/0.065/0.011
+state-far      500 70 avg/max/dev error: 0.011580/0.046/0.007
+state-far      500 80 avg/max/dev error: 0.014463/0.052/0.010
+state-far     1000 60 avg/max/dev error: 0.023834/0.024/0.000
+state-far     1000 70 avg/max/dev error: 0.004663/0.005/0.000
+state-far     1000 80 avg/max/dev error: 0.010363/0.010/0.000
+state-mixed    100 60 avg/max/dev error: 0.255530/0.302/0.033
+state-mixed    100 70 avg/max/dev error: 0.098234/0.369/0.086
+state-mixed    100 80 avg/max/dev error: 0.063885/0.183/0.030
+state-mixed    500 60 avg/max/dev error: 0.262167/0.277/0.004
+state-mixed    500 70 avg/max/dev error: 0.041185/0.195/0.033
+state-mixed    500 80 avg/max/dev error: 0.060798/0.097/0.009
+state-mixed   1000 60 avg/max/dev error: 0.261914/0.262/0.000
+state-mixed   1000 70 avg/max/dev error: 0.027902/0.028/0.000
+state-mixed   1000 80 avg/max/dev error: 0.059470/0.059/0.000
+
+Timeout test with XM_NUM_MODES=10; XM_MAX_MODE=0 XM_AVG_MODES=1; XM_AVG_BELOW=0; XM_ALL_MODES=1 XM_MIN_BIN_CNT=30
+state-close    100 60 avg/max/dev error: 0.021718/0.086/0.017
+state-close    100 70 avg/max/dev error: 0.032214/0.118/0.020
+state-close    100 80 avg/max/dev error: 0.077465/0.160/0.028
+state-close    500 60 avg/max/dev error: 0.014046/0.040/0.008
+state-close    500 70 avg/max/dev error: 0.029814/0.052/0.006
+state-close    500 80 avg/max/dev error: 0.082462/0.106/0.010
+state-close   1000 60 avg/max/dev error: 0.011691/0.012/0.000
+state-close   1000 70 avg/max/dev error: 0.028810/0.029/0.000
+state-close   1000 80 avg/max/dev error: 0.084969/0.085/0.000
+state-far      100 60 avg/max/dev error: 0.033540/0.121/0.025
+state-far      100 70 avg/max/dev error: 0.030455/0.116/0.022
+state-far      100 80 avg/max/dev error: 0.029599/0.149/0.024
+state-far      500 60 avg/max/dev error: 0.027430/0.062/0.011
+state-far      500 70 avg/max/dev error: 0.011949/0.042/0.008
+state-far      500 80 avg/max/dev error: 0.014417/0.050/0.010
+state-far     1000 60 avg/max/dev error: 0.023834/0.024/0.000
+state-far     1000 70 avg/max/dev error: 0.004663/0.005/0.000
+state-far     1000 80 avg/max/dev error: 0.010363/0.010/0.000
+state-mixed    100 60 avg/max/dev error: 0.312502/0.336/0.011
+state-mixed    100 70 avg/max/dev error: 0.125371/0.381/0.102
+state-mixed    100 80 avg/max/dev error: 0.148205/0.169/0.015
+state-mixed    500 60 avg/max/dev error: 0.313909/0.322/0.003
+state-mixed    500 70 avg/max/dev error: 0.044817/0.279/0.039
+state-mixed    500 80 avg/max/dev error: 0.151233/0.160/0.003
+state-mixed   1000 60 avg/max/dev error: 0.313849/0.314/0.000
+state-mixed   1000 70 avg/max/dev error: 0.014664/0.015/0.000
+state-mixed   1000 80 avg/max/dev error: 0.150102/0.150/0.000
+
+Timeout test with XM_NUM_MODES=10; XM_MAX_MODE=0 XM_AVG_MODES=1; XM_AVG_BELOW=0; XM_ALL_MODES=1 XM_MIN_BIN_CNT=50
+state-close    100 60 avg/max/dev error: 0.021245/0.103/0.018
+state-close    100 70 avg/max/dev error: 0.027716/0.111/0.019
+state-close    100 80 avg/max/dev error: 0.039276/0.119/0.026
+state-close    500 60 avg/max/dev error: 0.011369/0.035/0.006
+state-close    500 70 avg/max/dev error: 0.024903/0.047/0.006
+state-close    500 80 avg/max/dev error: 0.033406/0.067/0.010
+state-close   1000 60 avg/max/dev error: 0.011273/0.011/0.000
+state-close   1000 70 avg/max/dev error: 0.022547/0.023/0.000
+state-close   1000 80 avg/max/dev error: 0.036952/0.037/0.000
+state-far      100 60 avg/max/dev error: 0.030863/0.121/0.024
+state-far      100 70 avg/max/dev error: 0.030516/0.130/0.022
+state-far      100 80 avg/max/dev error: 0.027314/0.163/0.021
+state-far      500 60 avg/max/dev error: 0.022634/0.056/0.010
+state-far      500 70 avg/max/dev error: 0.012074/0.042/0.008
+state-far      500 80 avg/max/dev error: 0.010090/0.042/0.008
+state-far     1000 60 avg/max/dev error: 0.020725/0.021/0.000
+state-far     1000 70 avg/max/dev error: 0.009845/0.010/0.000
+state-far     1000 80 avg/max/dev error: 0.006218/0.006/0.000
+state-mixed    100 60 avg/max/dev error: 0.312017/0.337/0.011
+state-mixed    100 70 avg/max/dev error: 0.123903/0.385/0.101
+state-mixed    100 80 avg/max/dev error: 0.148517/0.166/0.015
+state-mixed    500 60 avg/max/dev error: 0.314188/0.322/0.003
+state-mixed    500 70 avg/max/dev error: 0.047431/0.230/0.040
+state-mixed    500 80 avg/max/dev error: 0.151049/0.160/0.002
+state-mixed   1000 60 avg/max/dev error: 0.313849/0.314/0.000
+state-mixed   1000 70 avg/max/dev error: 0.014664/0.015/0.000
+state-mixed   1000 80 avg/max/dev error: 0.150102/0.150/0.000
+
+Timeout test with XM_NUM_MODES=15; XM_MAX_MODE=0 XM_AVG_MODES=1; XM_AVG_BELOW=1; XM_ALL_MODES=1 XM_MIN_BIN_CNT=0
+state-close    100 60 avg/max/dev error: 0.017081/0.103/0.015
+state-close    100 70 avg/max/dev error: 0.032454/0.124/0.019
+state-close    100 80 avg/max/dev error: 0.060802/0.149/0.028
+state-close    500 60 avg/max/dev error: 0.006011/0.024/0.004
+state-close    500 70 avg/max/dev error: 0.030268/0.052/0.006
+state-close    500 80 avg/max/dev error: 0.060398/0.094/0.012
+state-close   1000 60 avg/max/dev error: 0.005010/0.005/0.000
+state-close   1000 70 avg/max/dev error: 0.028810/0.029/0.000
+state-close   1000 80 avg/max/dev error: 0.060960/0.061/0.000
+state-far      100 60 avg/max/dev error: 0.031081/0.134/0.024
+state-far      100 70 avg/max/dev error: 0.030374/0.116/0.022
+state-far      100 80 avg/max/dev error: 0.027918/0.140/0.022
+state-far      500 60 avg/max/dev error: 0.023857/0.062/0.011
+state-far      500 70 avg/max/dev error: 0.011734/0.046/0.008
+state-far      500 80 avg/max/dev error: 0.011254/0.042/0.009
+state-far     1000 60 avg/max/dev error: 0.020725/0.021/0.000
+state-far     1000 70 avg/max/dev error: 0.009845/0.010/0.000
+state-far     1000 80 avg/max/dev error: 0.007254/0.007/0.000
+state-mixed    100 60 avg/max/dev error: 0.288240/0.322/0.018
+state-mixed    100 70 avg/max/dev error: 0.139784/0.378/0.110
+state-mixed    100 80 avg/max/dev error: 0.093815/0.160/0.034
+state-mixed    500 60 avg/max/dev error: 0.287782/0.307/0.006
+state-mixed    500 70 avg/max/dev error: 0.082296/0.308/0.051
+state-mixed    500 80 avg/max/dev error: 0.096167/0.136/0.013
+state-mixed   1000 60 avg/max/dev error: 0.288391/0.288/0.000
+state-mixed   1000 70 avg/max/dev error: 0.072709/0.073/0.000
+state-mixed   1000 80 avg/max/dev error: 0.098167/0.098/0.000
+
+Timeout test with XM_NUM_MODES=15; XM_MAX_MODE=1 XM_AVG_MODES=0; XM_AVG_BELOW=1; XM_ALL_MODES=1 XM_MIN_BIN_CNT=0
+state-close    100 60 avg/max/dev error: 0.020343/0.077/0.016
+state-close    100 70 avg/max/dev error: 0.032943/0.118/0.020
+state-close    100 80 avg/max/dev error: 0.076947/0.164/0.028
+state-close    500 60 avg/max/dev error: 0.011776/0.040/0.008
+state-close    500 70 avg/max/dev error: 0.030067/0.052/0.006
+state-close    500 80 avg/max/dev error: 0.080897/0.106/0.011
+state-close   1000 60 avg/max/dev error: 0.011691/0.012/0.000
+state-close   1000 70 avg/max/dev error: 0.028810/0.029/0.000
+state-close   1000 80 avg/max/dev error: 0.084969/0.085/0.000
+state-far      100 60 avg/max/dev error: 0.036726/0.124/0.027
+state-far      100 70 avg/max/dev error: 0.030964/0.105/0.021
+state-far      100 80 avg/max/dev error: 0.029995/0.131/0.023
+state-far      500 60 avg/max/dev error: 0.029751/0.066/0.011
+state-far      500 70 avg/max/dev error: 0.011219/0.046/0.007
+state-far      500 80 avg/max/dev error: 0.016237/0.054/0.010
+state-far     1000 60 avg/max/dev error: 0.027979/0.028/0.000
+state-far     1000 70 avg/max/dev error: 0.009845/0.010/0.000
+state-far     1000 80 avg/max/dev error: 0.017617/0.018/0.000
+state-mixed    100 60 avg/max/dev error: 0.144869/0.298/0.085
+state-mixed    100 70 avg/max/dev error: 0.068810/0.372/0.053
+state-mixed    100 80 avg/max/dev error: 0.044518/0.232/0.023
+state-mixed    500 60 avg/max/dev error: 0.133448/0.247/0.044
+state-mixed    500 70 avg/max/dev error: 0.029925/0.095/0.019
+state-mixed    500 80 avg/max/dev error: 0.045547/0.065/0.006
+state-mixed   1000 60 avg/max/dev error: 0.129532/0.130/0.000
+state-mixed   1000 70 avg/max/dev error: 0.026069/0.026/0.000
+state-mixed   1000 80 avg/max/dev error: 0.046232/0.046/0.000
+
+Timeout test with XM_NUM_MODES=15; XM_MAX_MODE=0 XM_AVG_MODES=1; XM_AVG_BELOW=0; XM_ALL_MODES=1 XM_MIN_BIN_CNT=0
+state-close    100 60 avg/max/dev error: 0.022049/0.077/0.017
+state-close    100 70 avg/max/dev error: 0.031352/0.118/0.020
+state-close    100 80 avg/max/dev error: 0.075194/0.164/0.029
+state-close    500 60 avg/max/dev error: 0.012705/0.040/0.008
+state-close    500 70 avg/max/dev error: 0.029972/0.052/0.006
+state-close    500 80 avg/max/dev error: 0.081295/0.106/0.011
+state-close   1000 60 avg/max/dev error: 0.011691/0.012/0.000
+state-close   1000 70 avg/max/dev error: 0.028810/0.029/0.000
+state-close   1000 80 avg/max/dev error: 0.084969/0.085/0.000
+state-far      100 60 avg/max/dev error: 0.035838/0.148/0.026
+state-far      100 70 avg/max/dev error: 0.030344/0.116/0.022
+state-far      100 80 avg/max/dev error: 0.030445/0.149/0.025
+state-far      500 60 avg/max/dev error: 0.030167/0.062/0.011
+state-far      500 70 avg/max/dev error: 0.011828/0.040/0.008
+state-far      500 80 avg/max/dev error: 0.015940/0.058/0.011
+state-far     1000 60 avg/max/dev error: 0.027979/0.028/0.000
+state-far     1000 70 avg/max/dev error: 0.009845/0.010/0.000
+state-far     1000 80 avg/max/dev error: 0.017617/0.018/0.000
+state-mixed    100 60 avg/max/dev error: 0.076086/0.243/0.056
+state-mixed    100 70 avg/max/dev error: 0.061232/0.169/0.038
+state-mixed    100 80 avg/max/dev error: 0.041097/0.139/0.022
+state-mixed    500 60 avg/max/dev error: 0.031577/0.144/0.024
+state-mixed    500 70 avg/max/dev error: 0.046269/0.108/0.019
+state-mixed    500 80 avg/max/dev error: 0.040727/0.062/0.006
+state-mixed   1000 60 avg/max/dev error: 0.018534/0.019/0.000
+state-mixed   1000 70 avg/max/dev error: 0.046436/0.046/0.000
+state-mixed   1000 80 avg/max/dev error: 0.042159/0.042/0.000
+
+Timeout test with XM_NUM_MODES=15; XM_MAX_MODE=0 XM_AVG_MODES=1; XM_AVG_BELOW=0; XM_ALL_MODES=1 XM_MIN_BIN_CNT=5
+state-close    100 60 avg/max/dev error: 0.020314/0.077/0.016
+state-close    100 70 avg/max/dev error: 0.032898/0.118/0.020
+state-close    100 80 avg/max/dev error: 0.077770/0.160/0.028
+state-close    500 60 avg/max/dev error: 0.012634/0.040/0.008
+state-close    500 70 avg/max/dev error: 0.030053/0.049/0.006
+state-close    500 80 avg/max/dev error: 0.081493/0.103/0.011
+state-close   1000 60 avg/max/dev error: 0.011691/0.012/0.000
+state-close   1000 70 avg/max/dev error: 0.028810/0.029/0.000
+state-close   1000 80 avg/max/dev error: 0.084969/0.085/0.000
+state-far      100 60 avg/max/dev error: 0.035618/0.130/0.026
+state-far      100 70 avg/max/dev error: 0.029818/0.112/0.021
+state-far      100 80 avg/max/dev error: 0.029410/0.149/0.023
+state-far      500 60 avg/max/dev error: 0.029340/0.062/0.011
+state-far      500 70 avg/max/dev error: 0.011337/0.038/0.007
+state-far      500 80 avg/max/dev error: 0.016773/0.048/0.011
+state-far     1000 60 avg/max/dev error: 0.027979/0.028/0.000
+state-far     1000 70 avg/max/dev error: 0.009845/0.010/0.000
+state-far     1000 80 avg/max/dev error: 0.017617/0.018/0.000
+state-mixed    100 60 avg/max/dev error: 0.071651/0.251/0.055
+state-mixed    100 70 avg/max/dev error: 0.059647/0.230/0.038
+state-mixed    100 80 avg/max/dev error: 0.040871/0.138/0.020
+state-mixed    500 60 avg/max/dev error: 0.031690/0.130/0.025
+state-mixed    500 70 avg/max/dev error: 0.046825/0.098/0.020
+state-mixed    500 80 avg/max/dev error: 0.040807/0.056/0.006
+state-mixed   1000 60 avg/max/dev error: 0.018534/0.019/0.000
+state-mixed   1000 70 avg/max/dev error: 0.046436/0.046/0.000
+state-mixed   1000 80 avg/max/dev error: 0.042159/0.042/0.000
+
+Timeout test with XM_NUM_MODES=15; XM_MAX_MODE=0 XM_AVG_MODES=1; XM_AVG_BELOW=0; XM_ALL_MODES=1 XM_MIN_BIN_CNT=10
+state-close    100 60 avg/max/dev error: 0.019785/0.077/0.016
+state-close    100 70 avg/max/dev error: 0.033873/0.118/0.020
+state-close    100 80 avg/max/dev error: 0.079109/0.164/0.028
+state-close    500 60 avg/max/dev error: 0.012910/0.036/0.008
+state-close    500 70 avg/max/dev error: 0.029900/0.060/0.006
+state-close    500 80 avg/max/dev error: 0.081040/0.107/0.011
+state-close   1000 60 avg/max/dev error: 0.011691/0.012/0.000
+state-close   1000 70 avg/max/dev error: 0.028810/0.029/0.000
+state-close   1000 80 avg/max/dev error: 0.084969/0.085/0.000
+state-far      100 60 avg/max/dev error: 0.034895/0.155/0.026
+state-far      100 70 avg/max/dev error: 0.030446/0.121/0.021
+state-far      100 80 avg/max/dev error: 0.030873/0.144/0.024
+state-far      500 60 avg/max/dev error: 0.029655/0.065/0.011
+state-far      500 70 avg/max/dev error: 0.011324/0.044/0.007
+state-far      500 80 avg/max/dev error: 0.016363/0.052/0.010
+state-far     1000 60 avg/max/dev error: 0.027979/0.028/0.000
+state-far     1000 70 avg/max/dev error: 0.009845/0.010/0.000
+state-far     1000 80 avg/max/dev error: 0.017617/0.018/0.000
+state-mixed    100 60 avg/max/dev error: 0.074624/0.252/0.057
+state-mixed    100 70 avg/max/dev error: 0.062749/0.261/0.038
+state-mixed    100 80 avg/max/dev error: 0.040943/0.154/0.021
+state-mixed    500 60 avg/max/dev error: 0.032356/0.144/0.025
+state-mixed    500 70 avg/max/dev error: 0.046193/0.098/0.020
+state-mixed    500 80 avg/max/dev error: 0.040632/0.057/0.006
+state-mixed   1000 60 avg/max/dev error: 0.018534/0.019/0.000
+state-mixed   1000 70 avg/max/dev error: 0.046436/0.046/0.000
+state-mixed   1000 80 avg/max/dev error: 0.042159/0.042/0.000
+
+Timeout test with XM_NUM_MODES=15; XM_MAX_MODE=0 XM_AVG_MODES=1; XM_AVG_BELOW=0; XM_ALL_MODES=1 XM_MIN_BIN_CNT=20
+state-close    100 60 avg/max/dev error: 0.020433/0.081/0.017
+state-close    100 70 avg/max/dev error: 0.033550/0.111/0.021
+state-close    100 80 avg/max/dev error: 0.078104/0.152/0.029
+state-close    500 60 avg/max/dev error: 0.012838/0.040/0.008
+state-close    500 70 avg/max/dev error: 0.029969/0.049/0.007
+state-close    500 80 avg/max/dev error: 0.081290/0.102/0.011
+state-close   1000 60 avg/max/dev error: 0.011691/0.012/0.000
+state-close   1000 70 avg/max/dev error: 0.028810/0.029/0.000
+state-close   1000 80 avg/max/dev error: 0.084969/0.085/0.000
+state-far      100 60 avg/max/dev error: 0.032397/0.134/0.024
+state-far      100 70 avg/max/dev error: 0.029083/0.120/0.021
+state-far      100 80 avg/max/dev error: 0.028347/0.159/0.023
+state-far      500 60 avg/max/dev error: 0.026991/0.075/0.011
+state-far      500 70 avg/max/dev error: 0.011342/0.058/0.008
+state-far      500 80 avg/max/dev error: 0.014479/0.050/0.010
+state-far     1000 60 avg/max/dev error: 0.023834/0.024/0.000
+state-far     1000 70 avg/max/dev error: 0.004663/0.005/0.000
+state-far     1000 80 avg/max/dev error: 0.010363/0.010/0.000
+state-mixed    100 60 avg/max/dev error: 0.256385/0.296/0.032
+state-mixed    100 70 avg/max/dev error: 0.095520/0.358/0.081
+state-mixed    100 80 avg/max/dev error: 0.063038/0.150/0.028
+state-mixed    500 60 avg/max/dev error: 0.262126/0.278/0.004
+state-mixed    500 70 avg/max/dev error: 0.041029/0.230/0.032
+state-mixed    500 80 avg/max/dev error: 0.060803/0.097/0.010
+state-mixed   1000 60 avg/max/dev error: 0.261914/0.262/0.000
+state-mixed   1000 70 avg/max/dev error: 0.027902/0.028/0.000
+state-mixed   1000 80 avg/max/dev error: 0.059470/0.059/0.000
+
+Timeout test with XM_NUM_MODES=15; XM_MAX_MODE=0 XM_AVG_MODES=1; XM_AVG_BELOW=0; XM_ALL_MODES=1 XM_MIN_BIN_CNT=30
+state-close    100 60 avg/max/dev error: 0.020252/0.073/0.016
+state-close    100 70 avg/max/dev error: 0.033263/0.105/0.020
+state-close    100 80 avg/max/dev error: 0.079556/0.149/0.027
+state-close    500 60 avg/max/dev error: 0.014190/0.040/0.008
+state-close    500 70 avg/max/dev error: 0.029591/0.052/0.006
+state-close    500 80 avg/max/dev error: 0.081873/0.106/0.011
+state-close   1000 60 avg/max/dev error: 0.011691/0.012/0.000
+state-close   1000 70 avg/max/dev error: 0.028810/0.029/0.000
+state-close   1000 80 avg/max/dev error: 0.084969/0.085/0.000
+state-far      100 60 avg/max/dev error: 0.033242/0.142/0.026
+state-far      100 70 avg/max/dev error: 0.030163/0.116/0.022
+state-far      100 80 avg/max/dev error: 0.029996/0.149/0.023
+state-far      500 60 avg/max/dev error: 0.026718/0.066/0.011
+state-far      500 70 avg/max/dev error: 0.011895/0.048/0.008
+state-far      500 80 avg/max/dev error: 0.015301/0.054/0.010
+state-far     1000 60 avg/max/dev error: 0.023834/0.024/0.000
+state-far     1000 70 avg/max/dev error: 0.004663/0.005/0.000
+state-far     1000 80 avg/max/dev error: 0.010363/0.010/0.000
+state-mixed    100 60 avg/max/dev error: 0.313718/0.337/0.011
+state-mixed    100 70 avg/max/dev error: 0.113955/0.378/0.095
+state-mixed    100 80 avg/max/dev error: 0.152042/0.169/0.013
+state-mixed    500 60 avg/max/dev error: 0.314702/0.322/0.003
+state-mixed    500 70 avg/max/dev error: 0.034517/0.212/0.029
+state-mixed    500 80 avg/max/dev error: 0.154236/0.163/0.003
+state-mixed   1000 60 avg/max/dev error: 0.314868/0.315/0.000
+state-mixed   1000 70 avg/max/dev error: 0.006721/0.007/0.000
+state-mixed   1000 80 avg/max/dev error: 0.154175/0.154/0.000
+
+Timeout test with XM_NUM_MODES=15; XM_MAX_MODE=0 XM_AVG_MODES=1; XM_AVG_BELOW=0; XM_ALL_MODES=1 XM_MIN_BIN_CNT=50
+state-close    100 60 avg/max/dev error: 0.020915/0.120/0.017
+state-close    100 70 avg/max/dev error: 0.028487/0.118/0.018
+state-close    100 80 avg/max/dev error: 0.040187/0.129/0.025
+state-close    500 60 avg/max/dev error: 0.011385/0.035/0.006
+state-close    500 70 avg/max/dev error: 0.024897/0.049/0.006
+state-close    500 80 avg/max/dev error: 0.033528/0.075/0.010
+state-close   1000 60 avg/max/dev error: 0.011273/0.011/0.000
+state-close   1000 70 avg/max/dev error: 0.022547/0.023/0.000
+state-close   1000 80 avg/max/dev error: 0.036952/0.037/0.000
+state-far      100 60 avg/max/dev error: 0.031378/0.125/0.024
+state-far      100 70 avg/max/dev error: 0.031982/0.106/0.022
+state-far      100 80 avg/max/dev error: 0.028117/0.116/0.022
+state-far      500 60 avg/max/dev error: 0.021894/0.060/0.011
+state-far      500 70 avg/max/dev error: 0.012296/0.046/0.008
+state-far      500 80 avg/max/dev error: 0.009558/0.040/0.007
+state-far     1000 60 avg/max/dev error: 0.020725/0.021/0.000
+state-far     1000 70 avg/max/dev error: 0.009845/0.010/0.000
+state-far     1000 80 avg/max/dev error: 0.002073/0.002/0.000
+state-mixed    100 60 avg/max/dev error: 0.314023/0.336/0.010
+state-mixed    100 70 avg/max/dev error: 0.116792/0.378/0.094
+state-mixed    100 80 avg/max/dev error: 0.151945/0.168/0.012
+state-mixed    500 60 avg/max/dev error: 0.314896/0.322/0.003
+state-mixed    500 70 avg/max/dev error: 0.038130/0.261/0.032
+state-mixed    500 80 avg/max/dev error: 0.154078/0.161/0.003
+state-mixed   1000 60 avg/max/dev error: 0.314868/0.315/0.000
+state-mixed   1000 70 avg/max/dev error: 0.006721/0.007/0.000
+state-mixed   1000 80 avg/max/dev error: 0.154175/0.154/0.000
+
+Timeout test with XM_NUM_MODES=20; XM_MAX_MODE=0 XM_AVG_MODES=1; XM_AVG_BELOW=0; XM_ALL_MODES=1 XM_MIN_BIN_CNT=0
+state-close    100 60 avg/max/dev error: 0.024015/0.086/0.017
+state-close    100 70 avg/max/dev error: 0.030759/0.111/0.018
+state-close    100 80 avg/max/dev error: 0.080241/0.160/0.026
+state-close    500 60 avg/max/dev error: 0.020109/0.048/0.009
+state-close    500 70 avg/max/dev error: 0.028558/0.047/0.006
+state-close    500 80 avg/max/dev error: 0.084482/0.103/0.010
+state-close   1000 60 avg/max/dev error: 0.021086/0.021/0.000
+state-close   1000 70 avg/max/dev error: 0.028810/0.029/0.000
+state-close   1000 80 avg/max/dev error: 0.087056/0.087/0.000
+state-far      100 60 avg/max/dev error: 0.035864/0.142/0.027
+state-far      100 70 avg/max/dev error: 0.030891/0.126/0.021
+state-far      100 80 avg/max/dev error: 0.031539/0.172/0.024
+state-far      500 60 avg/max/dev error: 0.031449/0.066/0.011
+state-far      500 70 avg/max/dev error: 0.011756/0.046/0.008
+state-far      500 80 avg/max/dev error: 0.016692/0.052/0.011
+state-far     1000 60 avg/max/dev error: 0.036269/0.036/0.000
+state-far     1000 70 avg/max/dev error: 0.009845/0.010/0.000
+state-far     1000 80 avg/max/dev error: 0.017617/0.018/0.000
+state-mixed    100 60 avg/max/dev error: 0.065749/0.205/0.045
+state-mixed    100 70 avg/max/dev error: 0.065654/0.151/0.037
+state-mixed    100 80 avg/max/dev error: 0.038328/0.118/0.020
+state-mixed    500 60 avg/max/dev error: 0.037748/0.107/0.022
+state-mixed    500 70 avg/max/dev error: 0.061130/0.105/0.018
+state-mixed    500 80 avg/max/dev error: 0.038109/0.052/0.007
+state-mixed   1000 60 avg/max/dev error: 0.033401/0.033/0.000
+state-mixed   1000 70 avg/max/dev error: 0.065784/0.066/0.000
+state-mixed   1000 80 avg/max/dev error: 0.038086/0.038/0.000
+
+Timeout test with XM_NUM_MODES=20; XM_MAX_MODE=1 XM_AVG_MODES=0; XM_AVG_BELOW=1; XM_ALL_MODES=1 XM_MIN_BIN_CNT=0
+state-close    100 60 avg/max/dev error: 0.023471/0.077/0.018
+state-close    100 70 avg/max/dev error: 0.031953/0.111/0.020
+state-close    100 80 avg/max/dev error: 0.080115/0.160/0.027
+state-close    500 60 avg/max/dev error: 0.018718/0.048/0.009
+state-close    500 70 avg/max/dev error: 0.028811/0.052/0.006
+state-close    500 80 avg/max/dev error: 0.084077/0.109/0.010
+state-close   1000 60 avg/max/dev error: 0.021086/0.021/0.000
+state-close   1000 70 avg/max/dev error: 0.028810/0.029/0.000
+state-close   1000 80 avg/max/dev error: 0.087056/0.087/0.000
+state-far      100 60 avg/max/dev error: 0.035626/0.148/0.028
+state-far      100 70 avg/max/dev error: 0.031104/0.130/0.023
+state-far      100 80 avg/max/dev error: 0.031833/0.176/0.024
+state-far      500 60 avg/max/dev error: 0.030159/0.069/0.011
+state-far      500 70 avg/max/dev error: 0.011376/0.050/0.007
+state-far      500 80 avg/max/dev error: 0.016094/0.062/0.010
+state-far     1000 60 avg/max/dev error: 0.027979/0.028/0.000
+state-far     1000 70 avg/max/dev error: 0.009845/0.010/0.000
+state-far     1000 80 avg/max/dev error: 0.017617/0.018/0.000
+state-mixed    100 60 avg/max/dev error: 0.092859/0.263/0.070
+state-mixed    100 70 avg/max/dev error: 0.064733/0.295/0.045
+state-mixed    100 80 avg/max/dev error: 0.041915/0.133/0.020
+state-mixed    500 60 avg/max/dev error: 0.047696/0.179/0.035
+state-mixed    500 70 avg/max/dev error: 0.043131/0.095/0.021
+state-mixed    500 80 avg/max/dev error: 0.041442/0.057/0.006
+state-mixed   1000 60 avg/max/dev error: 0.031772/0.032/0.000
+state-mixed   1000 70 avg/max/dev error: 0.046436/0.046/0.000
+state-mixed   1000 80 avg/max/dev error: 0.042159/0.042/0.000
+
+Timeout test with XM_NUM_MODES=20; XM_MAX_MODE=0 XM_AVG_MODES=1; XM_AVG_BELOW=1; XM_ALL_MODES=1 XM_MIN_BIN_CNT=0
+state-close    100 60 avg/max/dev error: 0.019023/0.090/0.016
+state-close    100 70 avg/max/dev error: 0.033738/0.118/0.022
+state-close    100 80 avg/max/dev error: 0.066771/0.152/0.030
+state-close    500 60 avg/max/dev error: 0.005600/0.021/0.004
+state-close    500 70 avg/max/dev error: 0.030681/0.052/0.007
+state-close    500 80 avg/max/dev error: 0.068111/0.097/0.013
+state-close   1000 60 avg/max/dev error: 0.001879/0.002/0.000
+state-close   1000 70 avg/max/dev error: 0.028810/0.029/0.000
+state-close   1000 80 avg/max/dev error: 0.067223/0.067/0.000
+state-far      100 60 avg/max/dev error: 0.031752/0.134/0.024
+state-far      100 70 avg/max/dev error: 0.029746/0.109/0.021
+state-far      100 80 avg/max/dev error: 0.027220/0.124/0.021
+state-far      500 60 avg/max/dev error: 0.023069/0.069/0.010
+state-far      500 70 avg/max/dev error: 0.011480/0.055/0.008
+state-far      500 80 avg/max/dev error: 0.012316/0.052/0.009
+state-far     1000 60 avg/max/dev error: 0.020725/0.021/0.000
+state-far     1000 70 avg/max/dev error: 0.009845/0.010/0.000
+state-far     1000 80 avg/max/dev error: 0.009326/0.009/0.000
+state-mixed    100 60 avg/max/dev error: 0.281550/0.322/0.016
+state-mixed    100 70 avg/max/dev error: 0.125321/0.377/0.103
+state-mixed    100 80 avg/max/dev error: 0.085739/0.151/0.032
+state-mixed    500 60 avg/max/dev error: 0.281030/0.297/0.005
+state-mixed    500 70 avg/max/dev error: 0.075061/0.261/0.048
+state-mixed    500 80 avg/max/dev error: 0.084744/0.133/0.013
+state-mixed   1000 60 avg/max/dev error: 0.278208/0.278/0.000
+state-mixed   1000 70 avg/max/dev error: 0.072709/0.073/0.000
+state-mixed   1000 80 avg/max/dev error: 0.084929/0.085/0.000
